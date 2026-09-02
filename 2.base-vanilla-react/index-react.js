@@ -37,9 +37,15 @@ const content = React.createElement("div", { className: "content" },
     )
 );
 
-const footer = React.createElement("footer", { className: "footer-text" }, "© 2025 Mi Sitio Web. Página creada con HTML puro y CSS.");
+const footer = React.createElement("footer", { className: "footer-text" },
+    React.createElement("p", { className: "footer-text" }, "© 2025 Mi Sitio Web. Página creada con HTML puro y CSS.")
+)
 
-const container = React.createElement("div", { className: "container" }, header, content, footer);
+const container = React.createElement("div", { className: "container" },
+    header,
+    content,
+    footer
+);
 
 //dibujo el elemento en el gestionador del DOM de react con render()
 root.render(container);
